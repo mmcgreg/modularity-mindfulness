@@ -18,7 +18,11 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 1.5rem;
+  grid-template-areas:
+    "banner banner banner"
+    "intro intro intro"
+    "col1 col2 col3";
 }
 
 img {
