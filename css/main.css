@@ -33,10 +33,10 @@ img {
 }
 
 header {
-  align-items: center;
-
   grid-area: banner;
-  display: inline-grid;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 header [lang="ja"] {
@@ -44,29 +44,27 @@ header [lang="ja"] {
 }
 
 h1 {
-  grid-column: 1 / 4;
-  grid-row: 1;
   font-size: 1.125rem;
-}
-
-header span {
-  color: hotpink;
-
   display: flex;
-}
-
-nav {
-  display: flex;
-  grid-column: 3;
+  flex-direction: column;
 }
 
 ul {
   list-style-type: none;
-  word-spacing: 1rem;
   font-size: 1.125rem;
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+  margin-top: 0;
+
 }
 
 li {
+  word-spacing: 1em;
+}
+
+li a {
   color: #3783a3;
 }
 
@@ -116,7 +114,7 @@ section a {
 }
 
 footer {
-  display:inline-block;
+  display: inline-block;
   text-align: center;
   grid-area: footer;
 
