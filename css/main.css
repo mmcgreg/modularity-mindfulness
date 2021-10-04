@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  margin: 1.5rem;
+  margin: 1rem;
   display: grid;
   grid-template-areas:
     "banner banner banner"
@@ -75,13 +75,17 @@ main {
   grid-area: main;
 }
 
+main img {
+  margin-top: 1rem;
+}
+
 .intro {
   border-color: #e2e2e2;
   border-style: solid;
   border-left: none;
   border-right: none;
   margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  padding: 1rem;
   font-size: 1rem;
   text-align: center;
 }
@@ -92,15 +96,18 @@ main {
 
 h2 {
   font-size: 1.5rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+h2 span {
+  font-size: 1rem;
 }
 
 article {
   padding-bottom: 1rem;
-}
-
-article img {
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+  padding-top: 0;
 }
 
 section a {
@@ -118,6 +125,7 @@ footer {
   display: inline-block;
   text-align: center;
   grid-area: footer;
+
 
   border-color: #e2e2e2;
   border-top-style: solid;
