@@ -19,13 +19,6 @@ html {
 
 body {
   margin: 1rem;
-  display: grid;
-  grid-template-areas:
-    "banner banner banner"
-    "main main main"
-    "footer footer footer";
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
 }
 
 img {
@@ -34,10 +27,19 @@ img {
 }
 
 header {
-  grid-area: banner;
   display: flex;
   flex-direction: column;
   text-align: center;
+}
+
+@media only screen and (min-width: 37.5em) {
+
+  header {
+    display: grid;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
 }
 
 header [lang="ja"] {
@@ -61,6 +63,22 @@ ul {
   margin-top: 0;
 }
 
+@media only screen and (min-width: 37.5em) {
+
+  h1 {
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+  }
+
+  nav {
+    display: grid;
+    grid-column: 3;
+    align-content: center;
+  }
+
+}
+
 li {
   word-spacing: 1em;
 }
@@ -70,28 +88,34 @@ li a {
 }
 
 main {
-  display: contents;
   display: inline-grid;
-  grid-area: main;
-}
-
-main img {
-  margin-top: 1rem;
 }
 
 .intro {
-  border-color: #e2e2e2;
-  border-style: solid;
-  border-left: none;
-  border-right: none;
-  margin-top: 1.5rem;
-  padding: 1rem;
   font-size: 1rem;
   text-align: center;
+  margin: 0 auto 1.5rem;
+  max-width: 30em;
+  padding: 1rem;
+  border-bottom: .2rem solid #e2e2e2;
+  border-top: .2rem solid #e2e2e2;
 }
 
 .intro [lang="ja"] {
   font-size: 2rem;
+}
+
+@media only screen and (min-width: 37.5em) {
+
+  .intro {
+    border-color: #e2e2e2;
+    border-style: solid;
+    border-left: none;
+    border-right: none;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
 }
 
 h2 {
@@ -103,11 +127,6 @@ h2 {
 
 h2 span {
   font-size: 1rem;
-}
-
-article {
-  padding-bottom: 1rem;
-  padding-top: 0;
 }
 
 section a {
@@ -122,10 +141,9 @@ section a {
 }
 
 footer {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  grid-area: footer;
-
 
   border-color: #e2e2e2;
   border-top-style: solid;
