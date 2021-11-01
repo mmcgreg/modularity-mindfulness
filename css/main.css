@@ -18,12 +18,30 @@ html {
 }
 
 body {
-  margin: 1rem;
+  margin: 0;
+  padding: 1rem;
 }
 
 img {
   width: 100%;
   display: block;
+}
+
+h1 {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+h1 i {
+  display: flex;
+  justify-content: center;
+}
+
+h1 span {
+  display: flex;
+  justify-content: center;
+  font-size: 1.125rem;
 }
 
 header {
@@ -44,13 +62,6 @@ header {
 
 header [lang="ja"] {
   font-size: 2rem;
-}
-
-h1 {
-  font-size: 1.125rem;
-  display: flex;
-  flex-direction: column;
-  margin: 0;
 }
 
 ul {
@@ -91,14 +102,20 @@ main {
   display: inline-grid;
 }
 
+main img {
+  padding-top: 1rem;
+}
+
 .intro {
   font-size: 1rem;
   text-align: center;
-  margin: 0 auto 1.5rem;
+  margin: 1.5rem auto;
   max-width: 30em;
   padding: 1rem;
   border-bottom: .2rem solid #e2e2e2;
   border-top: .2rem solid #e2e2e2;
+
+  padding-top: 1rem;
 }
 
 .intro [lang="ja"] {
@@ -127,6 +144,10 @@ h2 {
 
 h2 span {
   font-size: 1rem;
+}
+
+article {
+  margin: 0;
 }
 
 section a {
