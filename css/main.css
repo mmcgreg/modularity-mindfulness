@@ -50,123 +50,96 @@ header {
   text-align: center;
 }
 
-@media only screen and (min-width: 37.5em) {
-
-  header {
-    display: grid;
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-}
-
-header [lang="ja"] {
-  font-size: 2rem;
-}
-
 ul {
-  list-style-type: none;
-  font-size: 1.125rem;
-  margin: 0;
+  list-style: none;
   display: flex;
   justify-content: space-evenly;
+  font-size: 1.125rem;
   padding: 0;
   margin-top: 0;
-}
-
-@media only screen and (min-width: 37.5em) {
-
-  h1 {
-    display: flex;
-    align-items: flex-start;
-    margin: 0;
-  }
-
-  nav {
-    display: grid;
-    grid-column: 3;
-    align-content: center;
-  }
-
-}
-
-li {
-  word-spacing: 1em;
 }
 
 li a {
   color: #3783a3;
 }
 
-main {
-  display: inline-grid;
-}
-
-main img {
-  padding-top: 1rem;
-}
-
 .intro {
-  font-size: 1rem;
-  text-align: center;
-  margin: 1.5rem auto;
-  max-width: 30em;
-  padding: 1rem;
+  margin: 0;
+  padding: 1rem 0;
   border-bottom: .2rem solid #e2e2e2;
   border-top: .2rem solid #e2e2e2;
-
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  grid-area: text;
   padding-top: 1rem;
+}
+
+.intro i {
+  margin: 0 0 1rem;
+  padding: 0 1rem;
+}
+
+.intro p {
+  margin: 0 0 1rem;
+  padding: 0 0 1rem;
 }
 
 .intro [lang="ja"] {
   font-size: 2rem;
 }
 
-@media only screen and (min-width: 37.5em) {
+div i {
+  font-size: 2rem;
+  margin: 1rem;
+  padding: 0;
+}
 
-  .intro {
-    border-color: #e2e2e2;
-    border-style: solid;
-    border-left: none;
-    border-right: none;
-    padding: 1rem;
-    font-size: 1rem;
-  }
+div p {
+  margin: 0;
+  padding: 1em;
+}
 
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "banner banner banner"
+    "col1 col2 col3";
+  grid-row-gap: 1rem;
+  align-items: center;
+  border-bottom: .2rem solid #e2e2e2;
+}
+
+main img {
+  grid-area: banner;
+  padding-bottom: .5rem;
+}
+
+section {
+  grid-area: col1;
+  grid-column: 1 / span 4;
+  margin: 0;
+  padding: .5rem 0;
 }
 
 h2 {
+  display: grid;
   font-size: 1.5rem;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
+  margin-bottom: 0;
+  padding-bottom: .5rem;
 }
 
-h2 span {
+article span {
   font-size: 1rem;
 }
 
-article {
-  margin: 0;
-}
-
-section a {
+article a {
   display: flex;
-
-  color: #3783a3;
-  border-color: #3783a3;
-  border-style: solid;
-  padding: .5em 1em .6em;
   border-radius: .3rem;
-  border-width: .2rem;
-}
-
-footer {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-
-  border-color: #e2e2e2;
-  border-top-style: solid;
-  border-width: .2rem;
+  margin: 1.5rem 0 1rem;
+  text-decoration: none;
+  outline: .2rem solid rgba(55, 131, 163, .3);
+  color: #3783a3
+  padding: .5rem 1rem .6rem;
 }
