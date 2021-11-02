@@ -164,9 +164,9 @@ footer {
   }
 
   header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
   }
 
   h1 {
@@ -177,12 +177,29 @@ footer {
     justify-content: left;
   }
 
+  h1 span {
+    justify-content: left;
+  }
+
   li {
     padding: 0 1rem;
+    display: inline;
+  }
+
+  ul {
+    text-align: right;
   }
 
   .intro {
     margin: 0 2rem .5rem;
+  }
+
+}
+
+@media only screen and (min-width: 62em) {
+
+  .intro {
+    margin: 0 15rem 1rem;
   }
 
 }
