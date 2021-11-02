@@ -71,8 +71,7 @@ li a {
   display: flex;
   flex-direction: column;
   text-align: center;
-  grid-area: text;
-  padding-top: 1rem;
+  grid-area: body;
 }
 
 .intro i {
@@ -81,12 +80,8 @@ li a {
 }
 
 .intro p {
-  margin: 0 0 1rem;
+  margin: 0 1rem;
   padding: 0 0 1rem;
-}
-
-.intro [lang="ja"] {
-  font-size: 2rem;
 }
 
 div i {
@@ -102,9 +97,10 @@ div p {
 
 main {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-areas:
     "banner banner banner"
+    "body body body"
     "col1 col2 col3";
   grid-row-gap: 1rem;
   align-items: center;
@@ -140,6 +136,53 @@ article a {
   margin: 1.5rem 0 1rem;
   text-decoration: none;
   outline: .2rem solid rgba(55, 131, 163, .3);
-  color: #3783a3
+  color: #3783a3;
   padding: .5rem 1rem .6rem;
+}
+
+footer {
+  margin: 0;
+  text-align: center;
+  font-size: .75rem;
+  padding-top: 1rem;
+}
+
+@media only screen and (min-width: 38em) {
+
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    margin: 0 1rem 0 0;
+    padding: 0;
+  }
+
+  article {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  h1 i {
+    justify-content: left;
+  }
+
+  li {
+    padding: 0 1rem;
+  }
+
+  .intro {
+    margin: 0 2rem .5rem;
+  }
+
 }
