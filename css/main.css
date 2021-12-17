@@ -183,11 +183,8 @@ footer {
 
   li {
     padding: 0 1rem;
-    display: inline;
-  }
-
-  ul {
-    text-align: right;
+    display: block;
+    align-items: center;
   }
 
   .intro {
